@@ -7,3 +7,5 @@ OUTPUT_FILE = ${OUTPUT_DIR}/$(basename $VALIDATE_FILE).txt
 python create_detections_1.py -c ./multiresfinetuned5296.pb -cs 300 -i $VALIDATE_FILE -o $OUTPUT_DIR
 
 
+
+

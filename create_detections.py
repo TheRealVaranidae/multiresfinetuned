@@ -118,7 +118,7 @@ if __name__ == "__main__":
     arr = np.array(Image.open(args.input))
     chip_size = (args.chip_size,args.chip_size)
     images = chip_image(arr,chip_size)
-    tempoutput = args.input.split("/")[::-1] + ".txt"
+    #tempoutput = args.input.split("/")[::-1] + ".txt"
     print(images.shape)
 
     #generate detections
@@ -160,7 +160,7 @@ if __name__ == "__main__":
     draw_bboxes(arr,bs,cs).save("p_bboxes/"+s[0].split(".")[0] + ".png")
     '''
 
-    with open(args.output+"/"+tempoutput,'w') as f:
+    with open(args.output,'w') as f:
         for i in range(bfull.shape[0]):
             for j in range(bfull[i].shape[0]):
                 #box should be xmin ymin xmax ymax

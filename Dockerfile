@@ -8,5 +8,5 @@ COPY . /tmp/
 ADD ./multiresfinetuned5296.pb /multiresfinetuned5296.pb
 ADD ./create_detections.py /create_detections.py
 ADD ./det_util.py /det_util.py
-ADD ./create_detections.sh /create_detections.sh
+ADD ./run.sh /run.sh
 ADD ./2568.tif /2568.tif

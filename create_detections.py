@@ -110,7 +110,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("-c","--checkpoint", default='pbs/model.pb', help="Path to saved model")
     parser.add_argument("-cs", "--chip_size", default=300, type=int, help="Size in pixels to chip input image")
-    parser.add_argument("input", help="Path to test chip")
+    parser.add_argument("-i","--input", help="Path to test chip")
     parser.add_argument("-o","--output",default="predictions.txt",help="Filepath of desired output")
     args = parser.parse_args()
 

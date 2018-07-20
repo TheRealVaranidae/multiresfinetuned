@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python inference.py -c ./multiresfinetuned5296.pb --input-image $1 --output-dir $2 
+python create_detections.py -c ./multiresfinetuned5296.pb $1 --output $2 

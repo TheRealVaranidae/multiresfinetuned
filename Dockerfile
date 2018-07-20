@@ -3,7 +3,7 @@ FROM python:3.6.5-onbuild
 
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
-COPY ./tmp/
+COPY . /tmp/
 
 ADD ./multiresfinetuned5296.pb /multiresfinetuned5296.pb
 ADD ./create_detections_1.py /create_detections_1.py

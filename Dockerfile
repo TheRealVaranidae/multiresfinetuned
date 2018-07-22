@@ -1,5 +1,8 @@
 FROM ubuntu:16.04
-FROM python:3.6.5-onbuild
+
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y python python-setuptools python-pip
 
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
@@ -12,5 +15,3 @@ ADD ./det_util.py /det_util.py
 ADD ./class_id_map.json /class_id_map.json
 ADD ./run.sh /run.sh
 ADD ./2568.tif /2568.tif
-
-RUN mv multiresfinetuned5296.pb model.pb

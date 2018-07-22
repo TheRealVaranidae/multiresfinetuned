@@ -1,8 +1,4 @@
-FROM ubuntu:16.04
-
-RUN apt-get update \
-    && apt-get upgrade -y \
-    && apt-get install -y python python-setuptools python-pip
+FROM python:3.6.5
 
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt

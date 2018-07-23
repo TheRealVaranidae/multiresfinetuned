@@ -8,5 +8,5 @@ RUN pip3 install -r requirements.txt
 
 RUN mv 2568.tif /2568.tif
 
-RUN mv multiresfinedtuned5296.pb model.pb
+RUN mv multiresfinetuned5296.pb model.pb
 
